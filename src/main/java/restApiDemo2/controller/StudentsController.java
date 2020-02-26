@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 import restApiDemo2.Dtos.StudentsDto;
 
 @RestController
@@ -27,4 +29,8 @@ public class StudentsController {
 
 	}
 
+	@PostMapping(value = "")
+	public void createStudents(@RequestBody StudentsDto dto) {
+		System.out.println(dto.toString());
+	}
 }
